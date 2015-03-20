@@ -38,7 +38,7 @@ static const CGFloat kAccuracy = 0.005;
   XCTAssertEqual([image size].width, 2);
   XCTAssertEqual([image size].height, 2);
   NSArray *colorArray = pixelsForImage(image);
-  assertEqualColorArrayByRGB(colorArray, pixelData, kAccuracy);
+  ICAssertEqualColorArrayByRGB(colorArray, pixelData, kAccuracy);
 }
 
 - (void)testCreateImageAndUnpackFromImageConsistentPixelData {
@@ -49,7 +49,7 @@ static const CGFloat kAccuracy = 0.005;
   XCTAssertEqual([image size].height, 2);
 
   NSArray *colorArray = pixelsForImage(image);
-  assertEqualColorArrayByRGB(colorArray, pixelData, kAccuracy);
+  ICAssertEqualColorArrayByRGB(colorArray, pixelData, kAccuracy);
 }
 
 #pragma mark pixels for image
@@ -61,7 +61,7 @@ static const CGFloat kAccuracy = 0.005;
   NSArray *result = pixelsForImage(testImage);
   XCTAssertEqual(4, [result count]);
   NSArray *expected = @[color, color, color, color];
-  assertEqualColorArrayByRGB(result, expected, kAccuracy);
+  ICAssertEqualColorArrayByRGB(result, expected, kAccuracy);
 }
 
 - (void)testPixelsForImageAllRed {
@@ -71,7 +71,7 @@ static const CGFloat kAccuracy = 0.005;
   NSArray *result = pixelsForImage(testImage);
   XCTAssertEqual(4, [result count]);
   NSArray *expected = @[color, color, color, color];
-  assertEqualColorArrayByRGB(result, expected, kAccuracy);
+  ICAssertEqualColorArrayByRGB(result, expected, kAccuracy);
 }
 
 - (void)testPixelsForImageAllGreen {
@@ -81,7 +81,7 @@ static const CGFloat kAccuracy = 0.005;
   NSArray *result = pixelsForImage(testImage);
   XCTAssertEqual(4, [result count]);
   NSArray *expected = @[color, color, color, color];
-  assertEqualColorArrayByRGB(result, expected, kAccuracy);
+  ICAssertEqualColorArrayByRGB(result, expected, kAccuracy);
 }
 
 - (void)testPixelsForImageAllBlue {
@@ -91,7 +91,7 @@ static const CGFloat kAccuracy = 0.005;
   NSArray *result = pixelsForImage(testImage);
   XCTAssertEqual(4, [result count]);
   NSArray *expected = @[color, color, color, color];
-  assertEqualColorArrayByRGB(result, expected, kAccuracy);
+  ICAssertEqualColorArrayByRGB(result, expected, kAccuracy);
 }
 
 - (void)testPixelsForImageMulticolor {
@@ -101,7 +101,7 @@ static const CGFloat kAccuracy = 0.005;
   XCTAssertEqual(4, [result count]);
   NSArray *expected =
   @[[UIColor redColor], [UIColor greenColor], [UIColor blueColor], [UIColor blackColor]];
-  assertEqualColorArrayByRGB(result, expected, kAccuracy);
+  ICAssertEqualColorArrayByRGB(result, expected, kAccuracy);
 }
 
 @end

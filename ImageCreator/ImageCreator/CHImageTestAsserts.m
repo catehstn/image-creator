@@ -2,7 +2,7 @@
 
 @implementation CHImageTestAsserts
 
-void assertEqualColorArrayByHue(NSArray *array, NSArray *expected, CGFloat accuracy) {
+void ICAssertEqualColorArrayByHue(NSArray *array, NSArray *expected, CGFloat accuracy) {
   NSCAssert([expected count] == [array count], @"Arrays have different lengths");
 
   for (NSInteger i = 0; i < [expected count]; i++) {
@@ -29,7 +29,7 @@ void assertEqualColorArrayByHue(NSArray *array, NSArray *expected, CGFloat accur
   }
 }
 
-void assertEqualColorArrayByRGB(NSArray *array, NSArray *expected, CGFloat accuracy) {
+void ICAssertEqualColorArrayByRGB(NSArray *array, NSArray *expected, CGFloat accuracy) {
   NSCAssert([expected count] == [array count], @"Arrays have different lengths");
 
   for (NSInteger i = 0; i < [expected count]; i++) {
@@ -56,7 +56,7 @@ void assertEqualColorArrayByRGB(NSArray *array, NSArray *expected, CGFloat accur
   }
 }
 
-void assertEqualFloatArray(NSArray *array, NSArray *expected, CGFloat accuracy) {
+void IHAssertEqualFloatArray(NSArray *array, NSArray *expected, CGFloat accuracy) {
   NSCAssert([expected count] == [array count], @"Arrays have different lengths");
 
   for (NSInteger i = 0; i < [expected count]; i++) {
@@ -69,7 +69,7 @@ void assertEqualFloatArray(NSArray *array, NSArray *expected, CGFloat accuracy) 
   }
 }
 
-void assertEqualCFloatArraysWithAccuracy(CGFloat *array,
+void IHAssertEqualCFloatArraysWithAccuracy(CGFloat *array,
                                          CGFloat *expected,
                                          NSInteger length,
                                          CGFloat accuracy) {
