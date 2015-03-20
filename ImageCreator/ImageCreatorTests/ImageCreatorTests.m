@@ -100,8 +100,18 @@ static const CGFloat kAccuracy = 0.005;
   NSArray *result = pixelsForImage(testImage);
   XCTAssertEqual(4, [result count]);
   NSArray *expected =
-  @[[UIColor redColor], [UIColor greenColor], [UIColor blueColor], [UIColor blackColor]];
+      @[[UIColor redColor], [UIColor greenColor], [UIColor blueColor], [UIColor blackColor]];
   ICAssertEqualColorArrayByRGB(result, expected, kAccuracy);
+}
+
+- (void)testPixelsForImageTwoColor {
+  UIColor *color1 = [UIColor purpleColor];
+  UIColor *color2 = [UIColor yellowColor];
+  UIImage *testImage = createTestImageNineQuadrants(color1, color2);
+
+  NSArray *result = pixelsForImage(testImage);
+  NSArray *expected = @[color1, color2, color1, color2, color1, color2, color1, color2, color1];
+  ICAssertEqualColorArrayByHue(result, expected, kAccuracy);
 }
 
 @end
