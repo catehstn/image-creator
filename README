@@ -1,1 +1,3 @@
 Add the project as a Submodule. Drag the ImageCreator file into XCode, and add it to your test target(s).
+
+More information on adding Submodules here: http://git-scm.com/book/en/v2/Git-Tools-Submodules
