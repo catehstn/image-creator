@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C87759E1ABC3495008BB12A /* ImageCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C87759D1ABC3495008BB12A /* ImageCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C8775A41ABC3495008BB12A /* ImageCreator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8775981ABC3495008BB12A /* ImageCreator.framework */; };
 		4C8775AB1ABC3495008BB12A /* ImageCreatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8775AA1ABC3495008BB12A /* ImageCreatorTests.m */; };
 		4C8775B61ABC362F008BB12A /* CHImageCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8775B41ABC362F008BB12A /* CHImageCreator.h */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		4C8775981ABC3495008BB12A /* ImageCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C87759C1ABC3495008BB12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C87759D1ABC3495008BB12A /* ImageCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCreator.h; sourceTree = "<group>"; };
 		4C8775A31ABC3495008BB12A /* ImageCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8775A91ABC3495008BB12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8775AA1ABC3495008BB12A /* ImageCreatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCreatorTests.m; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 		4C87759A1ABC3495008BB12A /* ImageCreator */ = {
 			isa = PBXGroup;
 			children = (
-				4C87759D1ABC3495008BB12A /* ImageCreator.h */,
 				4C87759B1ABC3495008BB12A /* Supporting Files */,
 				4C8775B41ABC362F008BB12A /* CHImageCreator.h */,
 				4C8775B51ABC362F008BB12A /* CHImageCreator.m */,
@@ -123,7 +120,6 @@
 			files = (
 				4C8775BA1ABC3B52008BB12A /* CHImageTestAsserts.h in Headers */,
 				4C8775B61ABC362F008BB12A /* CHImageCreator.h in Headers */,
-				4C87759E1ABC3495008BB12A /* ImageCreator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
