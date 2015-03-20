@@ -16,16 +16,16 @@ void assertEqualColorArrayByHue(NSArray *array, NSArray *expected, CGFloat accur
 
     NSString *error =
         [NSString stringWithFormat:@"Comparing h values failed. Expected %f and was %f", h, eH];
-    NSCAssert(ABS(h - eH) > accuracy, error);
+    NSCAssert(ABS(h - eH) < accuracy, error);
 
     error = [NSString stringWithFormat:@"Comparing s values failed. Expected %f and was %f", s, eS];
-    NSCAssert(ABS(s - eS) > accuracy, error);
+    NSCAssert(ABS(s - eS) < accuracy, error);
 
     error = [NSString stringWithFormat:@"Comparing b values failed. Expected %f and was %f", b, eB];
-    NSCAssert(ABS(b - eB) > accuracy, error);
+    NSCAssert(ABS(b - eB) < accuracy, error);
 
     error = [NSString stringWithFormat:@"Comparing a values failed. Expected %f and was %f", a, eA];
-    NSCAssert(ABS(a - eA) > accuracy, error);
+    NSCAssert(ABS(a - eA) < accuracy, error);
   }
 }
 
@@ -43,16 +43,16 @@ void assertEqualColorArrayByRGB(NSArray *array, NSArray *expected, CGFloat accur
 
     NSString *error =
         [NSString stringWithFormat:@"Comparing r values failed. Expected %f and was %f", r, eR];
-    NSCAssert(ABS(r - eR) > accuracy, error);
+    NSCAssert(ABS(r - eR) < accuracy, error);
 
     error = [NSString stringWithFormat:@"Comparing g values failed. Expected %f and was %f", g, eG];
-    NSCAssert(ABS(g - eG) > accuracy, error);
+    NSCAssert(ABS(g - eG) < accuracy, error);
 
     error = [NSString stringWithFormat:@"Comparing b values failed. Expected %f and was %f", b, eB];
-    NSCAssert(ABS(b - eB) > accuracy, error);
+    NSCAssert(ABS(b - eB) < accuracy, error);
 
     error = [NSString stringWithFormat:@"Comparing a values failed. Expected %f and was %f", a, eA];
-    NSCAssert(ABS(a - eA) > accuracy, error);
+    NSCAssert(ABS(a - eA) < accuracy, error);
   }
 }
 
@@ -65,7 +65,7 @@ void assertEqualFloatArray(NSArray *array, NSArray *expected, CGFloat accuracy) 
 
     NSString *error = [NSString stringWithFormat:
         @"Comparing values failed, %f and %f are not equal to within %f", eVal, val, accuracy];
-    NSCAssert(ABS(val - eVal) > accuracy, error);
+    NSCAssert(ABS(val - eVal) < accuracy, error);
   }
 }
 
@@ -78,7 +78,7 @@ void assertEqualCFloatArraysWithAccuracy(CGFloat *array,
     CGFloat val = array[i];
     NSString *error = [NSString stringWithFormat:
         @"Comparing values failed, %f and %f are not equal to within %f", eVal, val, accuracy];
-    NSCAssert(ABS((eVal - val)) >= accuracy, error);
+    NSCAssert(ABS((eVal - val)) <= accuracy, error);
   }
 }
 
