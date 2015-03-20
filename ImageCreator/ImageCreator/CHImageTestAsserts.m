@@ -56,30 +56,4 @@ void ICAssertEqualColorArrayByRGB(NSArray *array, NSArray *expected, CGFloat acc
   }
 }
 
-void IHAssertEqualFloatArray(NSArray *array, NSArray *expected, CGFloat accuracy) {
-  NSCAssert([expected count] == [array count], @"Arrays have different lengths");
-
-  for (NSInteger i = 0; i < [expected count]; i++) {
-    CGFloat val = [array[i] floatValue];
-    CGFloat eVal = [expected[i] floatValue];
-
-    NSString *error = [NSString stringWithFormat:
-        @"Comparing values failed, %f and %f are not equal to within %f", eVal, val, accuracy];
-    NSCAssert(ABS(val - eVal) < accuracy, error);
-  }
-}
-
-void IHAssertEqualCFloatArraysWithAccuracy(CGFloat *array,
-                                         CGFloat *expected,
-                                         NSInteger length,
-                                         CGFloat accuracy) {
-  for (NSInteger i = 0; i < length; i++) {
-    CGFloat eVal = expected[i];
-    CGFloat val = array[i];
-    NSString *error = [NSString stringWithFormat:
-        @"Comparing values failed, %f and %f are not equal to within %f", eVal, val, accuracy];
-    NSCAssert(ABS((eVal - val)) <= accuracy, error);
-  }
-}
-
 @end
